@@ -11,7 +11,7 @@ pipeline{
         }
         stage('login') {
             steps{
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                sh 'docker login -u skywateryang -p d09990c5-5f47-4f86-af28-80e806c33f00'
             }
         }
         stage('push') {
