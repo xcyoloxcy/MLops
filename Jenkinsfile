@@ -2,10 +2,10 @@ pipeline{
  agent any
 	
     stages {
-        stage('gitclone') {
+        stage('Build') {
             steps{
-                echo 'haha'
-             }
+                sh 'docker build -t skywateryang/flaskapp:latest .'
+            }
         }
 
     }
