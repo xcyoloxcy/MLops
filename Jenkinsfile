@@ -6,7 +6,7 @@ pipeline{
     stages {
         stage('Build') {
             steps{
-                sh 'sudo docker build -t skywateryang/flaskapp:latest .'
+                sh 'sudo docker build -t xcyhbp/flaskapp:latest .'
             }
         }
         stage('login') {
@@ -16,7 +16,7 @@ pipeline{
         }
         stage('push') {
             steps{
-                sh 'docker push skywateryang/flaskapp:latest'
+                sh 'docker push xcyhbp/flaskapp:latest'
             }
         }
     }
