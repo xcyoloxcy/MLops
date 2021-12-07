@@ -6,7 +6,7 @@ pipeline{
     stages {
         stage('Build') {
             steps{
-                sh 'sudo docker build -t xcyhbp/flaskapp:latest .'
+                sh 'docker build -t xcyhbp/flaskapp:latest .'
             }
         }
         stage('login') {
