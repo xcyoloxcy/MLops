@@ -6,17 +6,17 @@ pipeline{
     stages {
         stage('Build') {
             steps{
-                sh 'docker build -t xcyhbp/flaskapp:latest .'
+                sh '#!/bin/bash -ilex&&docker build -t xcyhbp/flaskapp:latest .'
             }
         }
         stage('login') {
             steps{
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                sh '#!/bin/bash -ilex&&echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
             }
         }
         stage('push') {
             steps{
-                sh 'docker push xcyhbp/flaskapp:latest'
+                sh '#!/bin/bash -ilex&&docker push xcyhbp/flaskapp:latest'
             }
         }
     }
